@@ -41,13 +41,12 @@ def contact(request):
                 cd['message'],
                 cd.get('email', '232123@qq.com'),
                 [''],
-                auth_user='', auth_password='',
             )
             return HttpResponseRedirect('/contact/thanks/')
 
     else:
         form = ContactForm(
-            initial={'subject':'I love you !'}
+            initial={'subject':'I love you !', 'email': '23@qq.com'}
         )
     return render_to_response('contact_form.html', {'form': form})
 

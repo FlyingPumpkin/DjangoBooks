@@ -1,4 +1,5 @@
 from django import forms
+import logging
 
 
 class ContactForm(forms.Form):
